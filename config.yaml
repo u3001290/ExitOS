@@ -1,0 +1,52 @@
+name: Exit OS
+slug: exit_os
+description: Scheduler & optimizer add-on for smart grids for energy management and cost savings.
+version: "1" # first version
+architecture:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+init: false
+boot: manual
+
+###############
+# Enable access to Home Assistant APIs
+homeassistant_api: true
+auth_api: true
+hassio_api: true
+###############
+
+map:
+  - share:rw
+  - addon_config:rw
+
+options:
+  Controllable_Consumer_asset_IDs: []
+  Controllable_Generator_asset_IDs: []
+  Controllable_Energy_Source_asset_IDs: []
+  Base_Building_consumption_IDs: []
+  Base_Building_generation_IDs: []
+  Simulation_code_directory: /config/ExitOS/MySimulationCode
+  Classes_code_directory: /config/ExitOS/MyClassesCode
+
+schema:
+  Controllable_Consumer_asset_IDs:
+    - description: "Controllable assets that consume energy."
+    - match: "^(.+)$"  # TODO: Define a more specific regex if needed
+  Controllable_Generator_asset_IDs:
+    - description: "Controllable generators that produce energy."
+    - match: "^(.+)$"  # TODO: Define a more specific regex if needed
+  Controllable_Energy_Source_asset_IDs:
+    - description: "Controllable batteries, solar panels, etc."
+    - match: "^(.+)$"  # TODO: Define a more specific regex if needed
+  Base_Building_consumption_IDs:
+    - description: "Fixed consumption of the building."
+    - match: "^(.+)$"  # TODO: Define a more specific regex if needed
+  Base_Building_generation_IDs:
+    - description: "Fixed generation of the building."
+    - match: "^(.+)$"  # TODO: Define a more specific regex if needed
+  Simulation_code_directory: str
+  Classes_code_directory: str
+
