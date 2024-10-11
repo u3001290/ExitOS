@@ -19,7 +19,7 @@ COPY config.yaml config.yaml
 RUN pip install holidays 
 
 # Convertim fitxers Python específics al format LF
-RUN dos2unix ./etc/services.d/example/abstraction/*.py
+RUN dos2unix ./etc/abstraction/*.py
 
 # TODO: Prova de convertir tots els fitxers al format LF perquè GitHub els converteix a CRLF
 # RUN find /rootfs -type f -exec dos2unix {} \;
