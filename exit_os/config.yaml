@@ -2,12 +2,13 @@ name: Exit OS
 slug: exit_os
 description: Scheduler & optimizer add-on for smart grids for energy management and cost savings.
 version: "1.0" # first version
-architecture:
+arch:
   - aarch64
   - amd64
   - armhf
   - armv7
   - i386
+url: https://github.com/u3001290/ExitOS
 init: false
 boot: manual
 
