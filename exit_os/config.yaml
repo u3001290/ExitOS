@@ -11,8 +11,8 @@ arch:
 url: https://github.com/u3001290/ExitOS
 boot: manual
 startup: application
-resources:
-  - ./exit_os
+#resources:
+#  - ./exit_os
 
 ###############
 # Enable access to Home Assistant APIs
