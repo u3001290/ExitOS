@@ -9,7 +9,6 @@ arch:
   - armv7
   - i386
 url: https://github.com/u3001290/ExitOS
-init: false
 boot: manual
 startup: application
 resources:
@@ -17,7 +16,7 @@ resources:
 
 ###############
 # Enable access to Home Assistant APIs
-homeassistant_api: true
+homeassistant: true
 auth_api: true
 hassio_api: true
 ###############
