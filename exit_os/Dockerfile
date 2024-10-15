@@ -1,5 +1,5 @@
-# Imatge base d'Ubuntu 20.04 per l'arquitectura aarch64
-FROM ghcr.io/home-assistant/aarch64-base-ubuntu:20.04
+# Imatge base d'Ubuntu 20.04 per l'arquitectura amd64
+FROM ghcr.io/home-assistant/amd64-base-ubuntu:20.04
 
 # Afegim el camí de bashio per utilitzar funcions
 ENV PATH="${PATH}:/usr/lib/bashio"
@@ -21,5 +21,3 @@ RUN pip install holidays
 # Convertim fitxers Python específics al format LF
 RUN dos2unix ./etc/abstraction/*.py
 
-# TODO: Prova de convertir tots els fitxers al format LF perquè GitHub els converteix a CRLF
-# RUN find /rootfs -type f -exec dos2unix {} \;
