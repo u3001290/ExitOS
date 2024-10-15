@@ -11,7 +11,7 @@ arch:
   - i386
 # url: https://github.com/u3001290/ExitOS
 boot: manual
-startup: application
+startup: services
 init: false
 #resources:
 #  - ./exit_os
