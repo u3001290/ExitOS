@@ -1,4 +1,5 @@
-name: Exit OS
+---
+name: Exit OS Add-On
 slug: exit_os
 description: Scheduler & optimizer add-on for smart grids for energy management and cost savings.
 version: "1.0" # first version
@@ -8,15 +9,16 @@ arch:
   - armhf
   - armv7
   - i386
-url: https://github.com/u3001290/ExitOS
+# url: https://github.com/u3001290/ExitOS
 boot: manual
 startup: application
+init: false
 #resources:
 #  - ./exit_os
 
 ###############
 # Enable access to Home Assistant APIs
-homeassistant: true
+homeassistant_api: true
 auth_api: true
 hassio_api: true
 ###############
