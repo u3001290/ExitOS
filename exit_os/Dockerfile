@@ -5,7 +5,8 @@ FROM ghcr.io/home-assistant/amd64-base-ubuntu:20.04
 ENV PATH="${PATH}:/usr/lib/bashio"
 
 # Actualitzem i instal·lem python, pip, i altres eines necessàries
-RUN apt update && apt install -y dos2unix python3 python3-pip \
+RUN apt update 
+    && apt install -y dos2unix python3 python3-pip \
     && pip install --upgrade pip \
     && pip install scikit-learn psutil func_timeout requests numpy pandas pyswarms tomli
 
